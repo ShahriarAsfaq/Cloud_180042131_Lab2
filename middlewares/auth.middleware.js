@@ -14,7 +14,9 @@ const postgres = knex({
 });
 postgres.select('*').from('users').then(data => {
   console.log(data);
-});
+})
+.catch((err) =>{console.log(err)});
+
 
 let isloggedin=false;
 
