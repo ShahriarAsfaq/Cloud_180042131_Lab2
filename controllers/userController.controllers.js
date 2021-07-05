@@ -7,12 +7,15 @@ let alert = require('alert');
 const postgres = knex({
   client: "pg",
   connection: {
-    host: "127.0.0.1",
-    user: "auth",
-    password: "tahmid",
-    database: "auth",
+    host: "shahriar-lab2.postgres.database.azure.com",
+    user: "shahriar@shahriar-lab2",
+    password: "UthshaisAg00db@y",
+    database: "postgres",
   },
 });
+
+
+
 postgres.select('*').from('users').then(data => {
   console.log(data);
 });
